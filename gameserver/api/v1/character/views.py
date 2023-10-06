@@ -11,8 +11,12 @@ from api.v1.character.serializers import CharacterSerializer
 @authentication_classes([JWTAuthentication])
 @permission_classes([IsAuthenticated])
 class CharacterListCreateView(generics.ListCreateAPIView):  # characters/ GET POST
-    queryset = Character.objects.all()
+    # queryset = Character.objects.all()
     serializer_class = CharacterSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        return Character.objects.filter(user=user)
 
 
 # characters/1/ GET PUT DELETE

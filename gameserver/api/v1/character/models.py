@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Q
+from django.contrib.auth.models import User
 
 
 class CharacterManager(models.Manager):
@@ -13,6 +14,7 @@ class Character(models.Model):
     nivel = models.PositiveIntegerField()
     banned = models.BooleanField(default=False)
     blocked = models.BooleanField(default=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     objects = CharacterManager()
     objects_all = models.Manager()
