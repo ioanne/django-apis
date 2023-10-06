@@ -107,7 +107,51 @@ db.sqlite3
 # Media files
 media/
 
+# Static files# Virtual environment
+venv/
+env/
+.venv/
+.venv3/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Log files
+*.log
+
+# Database
+db.sqlite3
+
+# Media files
+media/
+
 # Static files
+staticfiles/
+
+# Secret key
+*.key
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Caches
+__pycache__/
+.caches/
+
+# Dependency folders
+node_modules/
+venv/
+.env/
 staticfiles/
 
 # Secret key
