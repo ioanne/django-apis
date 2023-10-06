@@ -25,4 +25,5 @@ urlpatterns = [
     path("inventory/", include("api.v1.inventory.urls")),
     path("location/", include("api.v1.location.urls")),
     path("npc/", include("api.v1.npc.urls")),
+    path("auth/", include("api.v1.auth.urls")),
 ]

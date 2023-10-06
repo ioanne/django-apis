@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 EXTERNAL_APPS = [
     "django_extensions",
     "rest_framework",
+    "rest_framework_simplejwt",
 ]
 
 DJANGO_APPS = [
@@ -137,3 +138,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Reemplaza la autenticación de django con JWT
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+}
