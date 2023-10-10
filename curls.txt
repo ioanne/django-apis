@@ -1,0 +1,11 @@
+curl -X POST \
+  -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk2OTc4MjE4LCJpYXQiOjE2OTY5Nzc5MTgsImp0aSI6IjJkYmFmMzgxM2IwMjQxODE4MDUxNWM5NzgwNWFkNzc4IiwidXNlcl9pZCI6Mn0.hSdoiwqb4gWSPDoRX9HnN0v1kMZ6u7epn0850rQwoh0" \
+  -H "Content-Type: application/json" \
+  -d '{"user_id": 5, "leader_id": 6}' \
+  http://localhost:8000/clan/invite/
+
+
+curl -X GET \
+  -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJKV1QiOiJhY2Nlc3MiLCJleHAiOjI1NjA5NzYzODEsImlhdCI6MTY5Njk3NjM4MSwianRpIjoiYWVhODIyNDUzNGU0NGY4ZGE5MWY1OWQ5MzQ5YjdmZDEiLCJ1c2VyX2lkIjoyfQ.LwdIAS0Mfn756hoyMo5QlS_ucVo2OE0NRTTX9yoJNt0" \
+  -H "Content-Type: application/json" \
+  http://localhost:8000/characters/
