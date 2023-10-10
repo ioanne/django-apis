@@ -14,7 +14,7 @@ class Character(models.Model):
     nivel = models.PositiveIntegerField()
     banned = models.BooleanField(default=False)
     blocked = models.BooleanField(default=False)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="characters")
 
     objects = CharacterManager()
     objects_all = models.Manager()
